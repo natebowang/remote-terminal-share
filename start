@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+./ngrok tcp 22 --config=./ngrok.yml --log=stdout > /dev/null &
+screen -S shared
