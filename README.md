@@ -5,7 +5,7 @@
 学生：
 ```bash
 $ yum install screen # 安装依赖screen
-$ cd sharecmd && ./start # 运行共享命令行
+$ cd remote-terminal-share && ./start # 运行共享命令行
 ```
 老师：
 ```bash
@@ -22,8 +22,3 @@ $ kill xxxx && exit # 退出登陆，同时断掉连接
 |-- start  
 
 start脚本就两句，一个是用ngrok内网穿透，另一个是用screen启动一个共享shell。当然默认是学生电脑上启动了sshd。然后我通过ngrok.com登陆我的帐号，查看url和port，就能远程登陆到学生电脑了。
-
-# 欢迎大家一起参与这个项目
-你可以fork我的项目，然后修改一下名字，比如sharetobob阿，sharetoalice之类的。这样学生才知道share之后给谁打电话。  
-最重要的，记得改ngrok.yml里的auth，你懂的。  
-如果是苹果系统，ngrok肯定用不了，得换成苹果版的。  
